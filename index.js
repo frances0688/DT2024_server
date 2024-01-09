@@ -9,6 +9,7 @@ app.use(express.json());
 
 // Llamamos a ROUTES
 app.use("/users", require("./routes/users"));
+app.use("communities", require("./routes/communities"));
 
 dbConnection();
 
