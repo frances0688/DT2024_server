@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const transporter = require("../config/nodemailer");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
@@ -13,7 +14,13 @@ const UserController = {
 				password: password,
 				confirmed: false,
             });
-            res.status(201).send({message: "User created", user})
+            // FALTA DOMAIN DE CONFIRMACION
+            await transporter.sendMail({
+				to: req.body.email,
+				subject: "Confirmación de cuenta Administrador de fincas",
+				html: `<h1>Vamos a gestionar tu comunidad</h1>`,
+			});
+            res.status(201).send({message: "Te hemos enviado confirmación al email", user})
         } catch (error) {
             console.error(error)
             res.status(500).send({ message: 'There was an error' })
