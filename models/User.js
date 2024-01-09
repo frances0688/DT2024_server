@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const ObjectId = mongoose.SchemaTypes.ObjectId;
 
 const UserSchema = new mongoose.Schema(
 	// METER DATA DEL SCHEMA
@@ -25,9 +24,11 @@ const UserSchema = new mongoose.Schema(
 			type: Date,
 			required: [true, "Please, enter a date"],
 		},
-		avatar: {
-			type: String,
-		},
+		
+		// avatar: {
+		// 	type: String,
+		// },
+
 		// ADMIN or USER
 		role: {
 			type: String,
@@ -35,10 +36,6 @@ const UserSchema = new mongoose.Schema(
 		},
 		confirmed: Boolean,
 		tokens: [],
-		followers: [{ type: ObjectId, ref: "User" }],
-		following: [{ type: ObjectId, ref: "User" }],
-		postIds: [{ type: ObjectId, ref: "Post" }],
-		likesList: [{ type: ObjectId, ref: "Post" }],
 	},
 	{ timestamps: true }
 );
