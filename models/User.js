@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const ObjectId = mongoose.SchemaTypes.ObjectId;
 
 const UserSchema = new mongoose.Schema(
-	// METER DATA DEL SCHEMA
 	{
 		username: {
 			type: String,
@@ -25,12 +24,6 @@ const UserSchema = new mongoose.Schema(
 			type: Date,
 			required: [true, "Please, enter a date"],
 		},
-		
-		// avatar: {
-		// 	type: String,
-		// },
-
-		// ADMIN or USER
 		role: {
 			type: String,
 			default: "user",

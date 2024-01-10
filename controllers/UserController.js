@@ -44,18 +44,17 @@ const UserController = {
 			if (!user) {
 				return res.status(400).send({ message: "User does not exist." });
 			};
-			// if (!user.confirmed) {
-			// 	return res
-			// 		.status(400)
-			// 		.send({ message: "Please confirm your email address." });
-			// };
+			if (!user.confirmed) {
+				return res
+					.status(400)
+					.send({ message: "Please confirm your email address." });
+			};
 			const isMatch = bcrypt.compareSync(req.body.password, user.password);
 			if (!isMatch) {
 				return res
 					.status(400)
 					.send({ message: "Email o contraseña invalidos" });
 			};
-
 			const token = jwt.sign(
 				{
 					_id: user._id,
