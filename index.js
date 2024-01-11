@@ -15,6 +15,11 @@ const jwtCheck = auth({
 
 app.use(express.json());
 app.use(jwtCheck);
+// app.get("/test", (req, res) => {
+// 	const userId = req.auth.payload.sub;
+// 	console.log(userId);
+// 	res.send({ message: "userId", userId });
+// });
 
 dbConnection();
 
