@@ -3,10 +3,20 @@ const ObjectId = mongoose.SchemaTypes.ObjectId;
 
 const CommunitySchema = new mongoose.Schema(
     {
-        address: String,
+        address: {
+            type: String,
+            required: [
+				true,
+				"Es necesario indicar la dirección.",
+			],
+        },
         admin: String, //ID AUTH0
         owners: [{
-            type: String //FAKE IDs
+            type: String, //FAKE IDs or FAKE MAILS
+            required: [
+				true,
+				"Es necesario agregar propietarios de la comunidad.",
+			],
         }],
         incidences: [{ 
             type: ObjectId, 
