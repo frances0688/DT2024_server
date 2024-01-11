@@ -4,13 +4,13 @@ const ObjectId = mongoose.SchemaTypes.ObjectId;
 const CommunitySchema = new mongoose.Schema(
     {
         address: String,
-        admin: {
-            type: ObjectId,
-            ref: "User",
-        },
+        admin: String, //ID AUTH0
         owners: [{
-            type: ObjectId,
-            ref: "User"
+            type: String //FAKE IDs
+        }],
+        incidences: [{ 
+            type: ObjectId, 
+            ref: "Incidence"
         }],
         documents: [{
             type: String
