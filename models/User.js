@@ -3,16 +3,9 @@ const ObjectId = mongoose.SchemaTypes.ObjectId;
 
 const UserSchema = new mongoose.Schema(
 	{
-		username: {
+		auth0Id: {
 			type: String,
-			required: [true, "Please, enter a username"],
-			unique: true,
-			trim: true,
-		},
-		email: {
-			type: String,
-			required: [true, "Please, enter an email"],
-			match: [/.+\@.+\..+/, "Enter a valid email"],
+			required: true,
 			unique: true,
 			trim: true,
 		},
@@ -28,7 +21,6 @@ const UserSchema = new mongoose.Schema(
 			type: String,
 			default: "user",
 		},
-		confirmed: Boolean,
 		tokens: [],
 	},
 	{ timestamps: true }
