@@ -31,6 +31,22 @@ const CommunityController = {
             res.status(500).send({ message: "Error al acceder a las comunidades" })
         };
     },
+    async getByAddress(req, res) {
+        try {
+            const { address } = req.query;
+            if (!address) {
+                return res.status(400).send({ message: "Por favor, introduce una dirección válida" });
+            };
+            const searchRegex = new RegExp(address, "i");
+            const communities = await Community.find({
+                address: searchRegex
+            }).sort({ createdAt: -1 });
+            res.status(201).send(communities);
+        } catch (error) {
+            console.error(error);
+            res.status(500).send({ message: "Error al buscar comunidades por dirección" })
+        };
+    },
     async delete(req, res) {
         try {
             const community = await Community.findById(req.params._id);
