@@ -18,10 +18,11 @@ const CommunityController = {
         try {
             const community = await Community.findById(req.params._id);
             if (!community) {
-				return res.status(404).send({ message: "No se encuentra dicha comunidad" });
-			};
+                return res.status(404).send({ message: "No se encuentra dicha comunidad" });
+            };
+            await Incidence.deleteMany({ community: req.params._id });
         } catch (error) {
-            
+            res.status(500).send({ message: "No se ha podido eliminar la comunidad" })
         }
     }
 };
