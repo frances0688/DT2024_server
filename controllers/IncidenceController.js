@@ -19,7 +19,7 @@ const IncidenceController = {
         res.send({ message: 'Incidencia eliminada', incidence })        
         } catch (error) {       
         console.error(error)        
-        res.status(500).send({ message: 'Ha habido un problema al intentar eliminar la incidencia'})       
+        res.status(500).send({ message: 'Ha habido un error al intentar eliminar la incidencia'})       
         }       
         },
 
@@ -29,7 +29,7 @@ const IncidenceController = {
                 res.send({ message: 'Incidencia actualizada', incidence })        
             } catch (error) {       
             console.error(error)        
-            res.status(500).send({ message: 'Ha habido un problema al intentar actualizar la incidencia'})       
+            res.status(500).send({ message: 'Ha habido un error al intentar actualizar la incidencia'})       
             }       
             },
         }
