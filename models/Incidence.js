@@ -15,9 +15,9 @@ const IncidenceSchema = new mongoose.Schema(
         status: [{
             type: String,
             enum: [
-                "Pending",
-                "In Process",
-                "Resolved"
+                "Pendiente...",
+                "En proceso...",
+                "Resuelto"
             ]
         }],
         documents: [{
