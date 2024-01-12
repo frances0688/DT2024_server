@@ -20,8 +20,10 @@ app.use(jwtCheck);
 // 	console.log(userId);
 // 	res.send({ message: "userId", userId });
 // });
+
 // Llamamos a ROUTES
 app.use("communities", require("./routes/communities"));
+app.use("incidences", require("./routes/incidences"));
 
 dbConnection();
 
