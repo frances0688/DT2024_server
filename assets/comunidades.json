@@ -1,0 +1,158 @@
+{
+    "address": "Doctor Moliner, 27",
+    "n_propie": 10,
+    "n_inquilinos": 24,
+    "cuota_actual": 200,
+    "ahorro": 5000,
+    "fondos_iniciales": 10000,
+    "anios": 5,
+    "president": {
+      "name":"Jesús",
+      "mobile_num": 658652545
+    },
+    "gastos": {
+      "Luz": 74,
+      "Agua": 51,
+      "Cerrajero": 92,
+      "Limpieza": 239,
+      "Administración": 240,
+      "Mantenimiento": 91 
+    },
+    "owners": ["fakeemail1@example.com", "fakeemail2@example.com"],
+    "image": "/src/assets/Images/community1.jpeg"
+  },
+  {
+    "address": "Malvarrosa, 4",
+    "n_propie": 8,
+    "n_inquilinos": 10,
+    "cuota_actual": 150,
+    "ahorro": 3000,
+    "fondos_iniciales": 8000,
+    "anios": 4,
+    "president": {
+      "name":"Pedro",
+      "mobile_num": 623595888
+    },
+    "owners": ["fakeemail3@example.com", "fakeemail4@example.com"],
+    "image": "/src/assets/Images/community2.jpeg"
+  },
+  {
+    "address": "Xátiva, 15",
+    "n_propie": 24,
+    "n_inquilinos": 24,
+    "cuota_actual": 180,
+    "ahorro": 4500,
+    "fondos_iniciales": 12000,
+    "anios": 6,
+    "president": {
+      "name":"Ana María",
+      "mobile_num": 688344526
+    },
+    "owners": ["fakeemail5@example.com", "fakeemail6@example.com"],
+    "image": "/src/assets/Images/community3.jpeg"
+  },
+  {
+    "address": "Vicente Mártir, 14",
+    "n_propie": 10,
+    "n_inquilinos": 24,
+    "cuota_actual": 160,
+    "ahorro": 4000,
+    "fondos_iniciales": 10000,
+    "anios": 5,
+    "president": {
+      "name":"Marta",
+      "mobile_num": 689659485
+    },
+    "owners": ["fakeemail7@example.com", "fakeemail8@example.com"],
+    "image": "/src/assets/Images/community4.jpeg"
+  },
+  {
+    "address": "Catedral, 7",
+    "n_propie": 40,
+    "n_inquilinos": 46,
+    "cuota_actual": 120,
+    "ahorro": 3500,
+    "fondos_iniciales": 9000,
+    "anios": 4,
+    "president": {
+      "name":"Cristina",
+      "mobile_num": 658652545
+    },
+    "owners": ["fakeemail9@example.com", "fakeemail10@example.com"],
+    "image": "/src/assets/Images/community5.jpeg"
+  },
+  {
+    "address": "Reina, 20",
+    "n_propie": 20,
+    "n_inquilinos": 26,
+    "cuota_actual": 140,
+    "ahorro": 3800,
+    "fondos_iniciales": 9500,
+    "anios": 4,
+    "president": {
+      "name":"Amparo",
+      "mobile_num": 666423584
+    },
+    "owners": ["fakeemail11@example.com", "fakeemail12@example.com"],
+    "image": "/src/assets/Images/community6.jpeg"
+  },
+  {
+    "address": "Reina, 22",
+    "n_propie": 10,
+    "n_inquilinos": 24,
+    "cuota_actual": 190,
+    "ahorro": 4800,
+    "fondos_iniciales": 11000,
+    "anios": 5,
+    "president": {
+      "name":"Juan",
+      "mobile_num": 654989652
+    },
+    "owners": ["fakeemail13@example.com", "fakeemail14@example.com"],
+    "image": "/src/assets/Images/community7.jpeg"
+  },
+  {
+    "address": "Blasco Ibañez, 1",
+    "n_propie": 10,
+    "n_inquilinos": 10,
+    "cuota_actual": 170,
+    "ahorro": 4200,
+    "fondos_iniciales": 10000,
+    "anios": 4,
+    "president": {
+      "name":"Raquel",
+      "mobile_num": 658652545
+    },
+    "owners": ["fakeemail15@example.com", "fakeemail16@example.com"],
+    "image": "/src/assets/Images/community8.jpeg"
+  },
+  {
+    "address": "Alameda, 8",
+    "n_propie": 16,
+    "n_inquilinos": 10,
+    "cuota_actual": 160,
+    "ahorro": 4000,
+    "fondos_iniciales": 9000,
+    "anios": 5,
+    "president": {
+      "name":"Daniel",
+      "mobile_num": 627326594
+    },
+    "owners": ["fakeemail17@example.com", "fakeemail18@example.com"],
+    "image": "/src/assets/Images/community9.jpeg"
+  },
+  {
+    "address": "Plaça de l'Ajuntament, 101",
+    "n_propie": 48,
+    "n_inquilinos": 62,
+    "cuota_actual": 210,
+    "ahorro": 5500,
+    "fondos_iniciales": 12000,
+    "anios": 6,
+    "president": {
+      "name":"Alvaro",
+      "mobile_num": 658684637
+    },
+    "owners": ["fakeemail19@example.com", "fakeemail20@example.com"],
+    "image": "/src/assets/Images/community10.jpeg"
+  },
