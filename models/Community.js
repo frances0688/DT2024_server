@@ -2,31 +2,31 @@ const mongoose = require("mongoose");
 const ObjectId = mongoose.SchemaTypes.ObjectId;
 
 const CommunitySchema = new mongoose.Schema(
-    {
-        address: {
-            type: String,
-            required: [
-				true,
-				"Es necesario indicar la dirección.",
-			],
-        },
-        admin: String, //ID AUTH0
-        owners: [{
-            type: String, //FAKE IDs or FAKE MAILS
-            required: [
-				true,
-				"Es necesario agregar propietarios de la comunidad.",
-			],
-        }],
-        incidences: [{ 
-            type: ObjectId, 
-            ref: "Incidence"
-        }],
-        documents: [{
-            type: String
-        }]
-    },
-    { timestamps: true }
+	{
+		address: {
+			type: String,
+			required: [true, "Es necesario indicar la dirección."],
+		},
+		n_propie: Number,
+		cuota_actual: Number,
+		ahorro: Number,
+		fondos_iniciales: Number,
+		anios: Number,
+		admin: String, //ID AUTH0
+		owners: [
+			{
+				type: String, //FAKE IDs or FAKE MAILS
+				required: [true, "Es necesario agregar propietarios de la comunidad."],
+			},
+		],
+		incidences: [
+			{
+				type: ObjectId,
+				ref: "Incidence",
+			},
+		],
+	},
+	{ timestamps: true }
 );
 
 const Community = mongoose.model("Community", CommunitySchema);

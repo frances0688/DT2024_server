@@ -22,8 +22,8 @@ app.use(jwtCheck);
 // });
 
 // Llamamos a ROUTES
-app.use("communities", require("./routes/communities"));
-app.use("incidences", require("./routes/incidences"));
+app.use("/communities", require("./routes/communities"));
+app.use("/incidences", require("./routes/incidences"));
 
 dbConnection();
 
