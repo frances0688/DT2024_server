@@ -25,11 +25,11 @@ const CommunitySchema = new mongoose.Schema(
 			Administración: Number,
 			Mantenimiento: Number,
 		},
-		admin: String, //ID AUTH0
+		admin: String, 
 		image: String,
 		owners: [
 			{
-				type: String, //FAKE IDs or FAKE MAILS
+				type: String, 
 				required: [true, "Es necesario agregar propietarios de la comunidad."],
 			},
 		],

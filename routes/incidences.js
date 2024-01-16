@@ -4,6 +4,7 @@ const router = express.Router()
 
 const IncidenceController = require('../controllers/IncidenceController');
 
+router.post('/new-incidence',IncidenceController.create);
 router.get('/',IncidenceController.getAll);
 router.delete('/:_id',IncidenceController.delete);
 router.put('/:_id',IncidenceController.update);
