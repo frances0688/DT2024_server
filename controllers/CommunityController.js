@@ -8,7 +8,9 @@ const CommunityController = {
 				...req.body,
 				incidences: [],
 			});
-			res.status(201).send({ message: "Comunidad creada con éxito" });
+			res
+				.status(201)
+				.send({ message: "Comunidad creada con éxito", community });
 		} catch (error) {
 			console.error(error);
 			res.status(500).send({ message: "No se ha podido crear la comunidad" });
