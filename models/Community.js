@@ -8,11 +8,25 @@ const CommunitySchema = new mongoose.Schema(
 			required: [true, "Es necesario indicar la dirección."],
 		},
 		n_propie: Number,
+		n_inquilinos: Number,
 		cuota_actual: Number,
 		ahorro: Number,
 		fondos_iniciales: Number,
 		anios: Number,
+		president: {
+			name: String,
+			mobile_num: Number,
+		},
+		gastos: {
+			Luz: Number,
+			Agua: Number,
+			Cerrajero: Number,
+			Limpieza: Number,
+			Administración: Number,
+			Mantenimiento: Number,
+		},
 		admin: String, //ID AUTH0
+		image: String,
 		owners: [
 			{
 				type: String, //FAKE IDs or FAKE MAILS
