@@ -24,7 +24,7 @@ const CommunityController = {
 				path: "incidences",
 				select: "status category description",
 			});
-			res.status(201).send(communities);
+			res.status(200).send(communities);
 		} catch (error) {
 			console.error(error);
 			res.status(500).send({ message: "Error al acceder a las comunidades" });
@@ -42,12 +42,23 @@ const CommunityController = {
 			const communities = await Community.find({
 				address: searchRegex,
 			}).sort({ createdAt: -1 });
-			res.status(201).send(communities);
+			res.status(200).send(communities);
 		} catch (error) {
 			console.error(error);
 			res
 				.status(500)
 				.send({ message: "Error al buscar comunidades por dirección" });
+		}
+	},
+	async getById(req, res) {
+		try {
+			const community = await Community.findById(req.params._id);
+			res.status(200).send(community);
+		} catch (error) {
+			console.error(error);
+			res
+				.status(500)
+				.send({ message: "There was a problem getting the post by id" });
 		}
 	},
 };
