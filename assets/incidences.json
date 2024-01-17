@@ -1,0 +1,53 @@
+{
+    {
+      "title": "Goteo en el garage",
+      "community": "C/ Gran Vía, 123",
+      "description": "Desde hace dos días noto que gotea la llave de paso. He intentado cerrarla bien, pero el goteo persiste.",
+      "owner": "Juan Pérez",
+      "provider": "Fontanero",
+      "date": "20/02/2024",
+      "status": "Registro de incidencia",
+      "image": "/src/assets/Images/humedadg.jpeg"
+    },
+    {
+      "title": "Cristalera rota",
+      "community": "C/ Doctor Moliner, 27",
+      "description": "La cristalera de entrada al edificio ha amanecido rota. Creo que han intentado forzar la entrada durante la noche.",
+      "owner": "María Gómez",
+      "provider": "Mobiliario",
+      "date": "22/02/2024",
+      "status": "Registro de incidencia",
+      "image": "/src/assets/Images/cristalera_rota.jpeg"
+    },
+    {
+      "title": "Me niego",
+      "community": "Plaza de la Reina, 20",
+      "description": "El suelo del garaje recién puesto se ha agrietado. No pienso pagar más por un trabajo mal hecho. Necesito una solución inmediata.",
+      "owner": "Luis Rodríguez",
+      "provider": "Mobiliario",
+      "date": "25/02/2024",
+      "status": "Registro de incidencia",
+      "image": "/src/assets/Images/suelo_agrietado.jpeg"
+    },
+    {
+      "title": "El interruptor pide cambio",
+      "community": "Av. Reino de Valencia, 87",
+      "description": "El interruptor exterior necesita un cambio. Tiene todos los cables expuestos y es peligroso. Urgente intervención de un electricista.",
+      "owner": "Ana Martínez",
+      "provider": "Electricista",
+      "date": "28/02/2024",
+      "status": "Registro de incidencia",
+      "image": "/src/assets/Images/interruptor_danado.jpeg"
+    },
+    {
+      "title": "No cierra",
+      "community": "C/ Xátiva, 15",
+      "description": "La puerta principal del edificio no cierra correctamente. Necesitamos la ayuda de un cerrajero para solucionar el problema lo antes posible.",
+      "owner": "Carlos López",
+      "provider": "Cerrajero",
+      "date": "01/03/2024",
+      "status": "Registro de incidencia",
+      "image": "/src/assets/Images/puerta_no_cierra.jpeg"
+    }
+  }
+  
