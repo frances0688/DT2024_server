@@ -18,12 +18,12 @@ const CommunitySchema = new mongoose.Schema(
 			mobile_num: Number,
 		},
 		gastos: {
-			Luz: Number,
-			Agua: Number,
-			Cerrajero: Number,
-			Limpieza: Number,
-			Administración: Number,
-			Mantenimiento: Number,
+			luz: Number,
+			agua: Number,
+			cerrajero: Number,
+			limpieza: Number,
+			administración: Number,
+			mantenimiento: Number,
 		},
 		admin: String, //ID AUTH0
 		image: String,
