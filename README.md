@@ -83,8 +83,7 @@ To set up the server side of the application, follow these steps:
 Make sure you have [Node.js](https://nodejs.org/) installed on your machine before running these commands.
 
 ### Frontend
-![Tu_AppMinistrador_client
-]https://github.com/Cocera/Tu_AppMinistrador_client
+https://github.com/Cocera/Tu_AppMinistrador_client
 
 ### Contributing
 Contributions are welcomed and appreciated! Your input helps us create a better community and enhance the Tu AppMinistrador project.
