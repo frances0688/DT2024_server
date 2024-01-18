@@ -21,11 +21,9 @@ const IncidenceController = {
 			res.send({ message: "Incidencia eliminada", incidence });
 		} catch (error) {
 			console.error(error);
-			res
-				.status(500)
-				.send({
-					message: "Ha habido un error al intentar eliminar la incidencia",
-				});
+			res.status(500).send({
+				message: "Ha habido un error al intentar eliminar la incidencia",
+			});
 		}
 	},
 
@@ -35,11 +33,9 @@ const IncidenceController = {
 			res.send({ message: "Incidencia actualizada", incidence });
 		} catch (error) {
 			console.error(error);
-			res
-				.status(500)
-				.send({
-					message: "Ha habido un error al intentar actualizar la incidencia",
-				});
+			res.status(500).send({
+				message: "Ha habido un error al intentar actualizar la incidencia",
+			});
 		}
 	},
 
@@ -48,9 +44,36 @@ const IncidenceController = {
 			const incidence = await Incidence.create(req.body);
 			res
 				.status(201)
-				.send({ message: "Comunidad creada con éxito", incidence });
+				.send({ message: "Incidencia creada con éxito", incidence });
 		} catch (error) {
-			res.status(500).send({ message: "No se ha podido crear la comunidad" });
+			res.status(500).send({ message: "No se ha podido crear la incidencia" });
+		}
+	},
+	async getById(req, res) {
+		try {
+			const incidence = await Incidence.findById(req.params._id);
+			res.status(200).send(incidence);
+		} catch (error) {
+			console.error(error);
+			res.status(500).send({ message: "Error al buscar incidencia por id" });
+		}
+	},
+	async getByKeyword(req, res) {
+		try {
+			const { keyword } = req.query;
+			if (!keyword) {
+				return res
+					.status(400)
+					.send({ message: "Por favor, introduce una palabra válida" });
+			}
+			const searchRegex = new RegExp(keyword, "i");
+			const incidences = await Incidence.find({
+				keyword: searchRegex,
+			}).sort({ createdAt: -1 });
+			res.status(200).send(incidences);
+		} catch (error) {
+			console.error(error);
+			res.status(500).send({ message: "Error al buscar incidencias" });
 		}
 	},
 };

@@ -56,9 +56,7 @@ const CommunityController = {
 			res.status(200).send(community);
 		} catch (error) {
 			console.error(error);
-			res
-				.status(500)
-				.send({ message: "There was a problem getting the post by id" });
+			res.status(500).send({ message: "Error al buscar comunidad por id" });
 		}
 	},
 };

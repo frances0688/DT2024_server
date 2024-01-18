@@ -23,14 +23,6 @@ app.use(
 );
 app.use(jwtCheck);
 
-app.get("/test", (req, res) => {
-	const userId = req.auth.payload.sub;
-	const token = req.auth.token;
-	console.log(req);
-	console.log("Auth", req.auth.token);
-	res.send({ message: "userId", userId });
-});
-
 // Llamamos a ROUTES
 app.use("/communities", require("./routes/communities"));
 app.use("/incidences", require("./routes/incidences"));

@@ -5,7 +5,7 @@ const IncidenceSchema = new mongoose.Schema(
 	{
 		title: String,
 		description: String,
-		provider: {
+		progress: {
 			type: String,
 			enum: [
 				"Registro de incidencia",
@@ -16,15 +16,17 @@ const IncidenceSchema = new mongoose.Schema(
 			],
 		},
 		owner: String,
-		community: {
-			type: ObjectId,
-			ref: "Community",
-		},
-		status: {
+		community: String,
+		provider: {
 			type: String,
-			enum: ["Pending", "In Process", "Resolved"],
+			enum: ["Fontanero", "Mobiliario", "Electricista", "Cerrajero"],
 		},
 		image: String,
+		date: String,
+		status: {
+			type: String,
+			enum: ["Pendiente", "Activa", "Resuelta"],
+		},
 	},
 	{ timestamps: true }
 );
