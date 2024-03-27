@@ -1,7 +1,6 @@
 import { Schema, model } from 'mongoose';
 
 
-// Define schema for Incident
 const incidentSchema = new Schema({
   title: {
     type: String,
@@ -9,7 +8,7 @@ const incidentSchema = new Schema({
   },
   community_id: {
     type: Schema.Types.ObjectId,
-    ref: 'Community', // Assuming you have a Community model
+    ref: 'Community',
     required: true
   },
   description: {
@@ -18,21 +17,22 @@ const incidentSchema = new Schema({
   },
   user_id: {
     type: Schema.Types.ObjectId,
-    ref: 'User', // Assuming you have a User model
-    required: true
+    ref: 'User',
+    required: false // Could be created by AdmFincas
   },
   category: {
     type: String,
-    enum: ['Mantenimiento', 'Seguridad', 'Limpieza', 'Servicios', 'Otro'],
+    enum: ['Mantenimiento', 'Seguridad', 'Limpieza', 'Servicios', 'Otro'], // button answer
     required: true
   },
   providers: {
-    type: [Schema.Types.ObjectId], // Assuming providers are represented by ids
+    type: [Schema.Types.ObjectId],
     default: []
   },
   date: {
-    type: Date,
-    default: Date.now
+    type: Date,  // Date.now maybe?
+    default: Date.now,
+    required: true
   },
   progress: {
     status: {
@@ -47,7 +47,7 @@ const incidentSchema = new Schema({
     note: String
   },
   images: {
-    type: [String], // Assuming image URLs are stored as strings
+    type: [String],
     default: []
   },
   status: {
@@ -56,11 +56,10 @@ const incidentSchema = new Schema({
   },
   notifyUsers: {
     type: [Schema.Types.ObjectId],
-    ref: 'User', // Assuming you have a User model for users to be notified
+    ref: 'User',
     default: []
   }
 });
 
-// Create model from schema
 const incidentModel = model('Incident', incidentSchema);
 export default incidentModel;

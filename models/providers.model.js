@@ -12,7 +12,7 @@ const providerSchema = new Schema({
   services: {
     type: [{
       type: String,
-      enum: ['Electricista', 'Fontanero', 'Seguro', 'Pintor', 'Cerrajero', 'Carpintero', 'Albañil', 'Limpieza', 'Antenista', 'Arquitecto', 'Abogado', 'Cuidador', 'Jardinero', 'Mascotas', 'Técnico Informático', 'Otros']
+      enum: ['Electricista', 'Fontanero', 'Seguro', 'Pintor', 'Cerrajero', 'Carpintero', 'Albañil', 'Limpieza', 'Antenista', 'Arquitecto', 'Abogado', 'Cuidador', 'Jardinero', 'Domófono', 'Otros']
     }],
     default: []
   },
@@ -29,6 +29,5 @@ const providerSchema = new Schema({
   contactPerson: String
 });
 
-// Create model from schema
 const providerModel = model('Provider', providerSchema);
 export default providerModel;

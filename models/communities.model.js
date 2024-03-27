@@ -21,7 +21,7 @@ const communitySchema = new Schema({
   },
   president: {
     type: Schema.Types.ObjectId,
-    ref: 'User', // Assuming you have a User model
+    ref: 'User',
     required: true
   },
   gastos: {
@@ -30,10 +30,9 @@ const communitySchema = new Schema({
   },
   incidents: [{
     type: Schema.Types.ObjectId,
-    ref: 'Incident' // Assuming you have an Incident model
+    ref: 'Incident'
   }]
 });
 
-// Create model from schema
 const communityModel = model('Community', communitySchema, 'communities');
 export default communityModel;

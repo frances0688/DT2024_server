@@ -9,7 +9,7 @@ const usersSchema = new Schema({
     type: String,
     required: true
   },
-  admin: {
+  isAdmin: {
     type: Boolean,
     default: false
   },
@@ -22,6 +22,10 @@ const usersSchema = new Schema({
     type: String,
     required: true
   },
+  validated: {
+    type: Boolean,
+    default: false,
+  },
   door: String,
   floor: String,
   phone: {
@@ -29,7 +33,7 @@ const usersSchema = new Schema({
     match: /^\+?[0-9]+$/, // Regex for phone number validation
     required: true
   },
-  owner: {
+  isOwner: {
     type: Boolean,
     default: false
   },
@@ -41,7 +45,7 @@ const usersSchema = new Schema({
   },
   community_id: {
     type: Schema.Types.ObjectId,
-    ref: 'Community', // Assuming you have a Community model
+    ref: 'Community',
     required: true
   },
   notifications: {
